@@ -1,0 +1,9 @@
+hold on
+run = 'A'
+runvar = 'AA'
+for i=1:size(runvar,2)
+    label = [run,num2str(i)];
+    track = genvarname(label);
+    scatter(track(:,1),track(:,2),10,track(:,3))
+    text(track(size(runvar{i},1),1),runvar{i}(size(runvar{i},1),2),label,'BackgroundColor','y');
+end
